@@ -1,0 +1,84 @@
+.title {
+  text-align: center;
+  font-family: var(--font-serif);
+  font-size: 2.7vw;
+  max-width: 50vw;
+  height: max-content;
+  margin: auto;
+}
+.WarsSection {
+  scroll-snap-type: y mandatory; 
+  overflow-y: scroll;
+  height: calc(100vh - 84px);
+}
+.WarsSection::-webkit-scrollbar {
+  height: 5px;
+  width: 8px;
+}
+.WarsSection::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.205);
+  border-radius: 10px;
+}
+.WarsSection::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px; 
+}
+.WarsSection::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+.WarsSection section {
+  padding-block: 20px;
+  scroll-snap-align: start; 
+  position: relative;
+  min-height: calc(100vh - 79px);
+}
+.timelineSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.TimelineHelp {
+  max-width: 30vw;
+  font-size: 1.7vw;
+  text-align: center;
+  color: var(--secundary-color);
+}
+.Indicator {
+  position: absolute;
+  bottom: 0;
+}
+.Indicator svg {
+  color: var(--secundary-color);
+  transition: transform 0.5s ease;
+  animation: downIndicatorAnimation infinite 3s;
+}
+@keyframes downIndicatorAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@media (width < 840px) {
+  .timelineDiv {
+    display: flex;
+    align-items: center;
+    height: 220px;
+    margin: 0 500px 0 500px;
+    overflow-x: auto;
+  }
+  .title {
+    font-size: 2em;
+    max-width: 85vw;
+  }
+  .TimelineHelp {
+    max-width: 90vw;
+    font-size: 1.4em;
+    transform: translateY(-20px);
+  }
+}

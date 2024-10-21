@@ -1,0 +1,57 @@
+.close {
+  background-color: var(--background);
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  padding: 5px 15px;
+  color: var(--text-color);
+  font-weight: 800;
+  font-size: 2em;
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  cursor: pointer;
+}
+.modal {
+  position: relative;
+  background-color: var(--background);
+  height: max-content;
+  transform: scale(1.05);
+}
+.ModalContent {
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+.ModalContent div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%;
+}
+.extras {
+  position: relative;
+}
+.extras svg {
+  color: var(--text-color);
+  width: 5vw;
+  height: 5vw;
+}
+.extras:after {
+  content: "+";
+  position: absolute;
+  bottom: -35%;
+  left: -13%;
+  color: var(--primary-color);
+  font-size: 4.5vw;
+  cursor: pointer;
+}
+
+@media (width < 840px) {
+  .ModalContent {
+    flex-direction: column;
+  }
+  .ModalContent div {
+    width: 100%;
+  }
+}
