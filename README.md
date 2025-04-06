@@ -1,2 +1,2 @@
 # Sites
- Os principais sites que eu fiz
+ Sites feitos para aprendizado somente.
